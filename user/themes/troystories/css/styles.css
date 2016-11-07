@@ -391,11 +391,13 @@ hr {
 .story {
   margin-bottom: 4rem;
 }
+.page-photo,
 .story-photo {
   margin-left: -20px;
   margin-right: -20px;
   margin-bottom: 1rem;
 }
+.page-photo img,
 .story-photo img {
   max-width: 100%;
 }
@@ -446,22 +448,22 @@ hr {
   text-align: center;
   font-style: italic;
 }
-.site-footer ul {
+.social ul {
   margin: 10px 0;
   text-align: center;
 }
-.site-footer li {
+.social li {
   display: inline-block;
   font-size: 1.6rem;
 }
-.site-footer .social a {
+.social a {
   padding: 0 10px;
   text-transform: uppercase;
   text-decoration: none;
   color: #aaa;
   transition: all 1s;
 }
-.site-footer .social a:hover {
+.social a:hover {
   text-decoration: underline;
   color: #E92739;
   transition: all 0.25s;
@@ -483,6 +485,12 @@ hr {
 .page-story .story {
   margin-bottom: 6rem;
 }
+.site-content .social img {
+  width: 100px;
+}
+.page-follow .site-content {
+  text-align: center;
+}
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*
@@ -498,6 +506,7 @@ there.
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
+  .page-photo,
   .story-photo {
     margin-left: 0;
     margin-right: 0;    

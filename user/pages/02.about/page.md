@@ -1,7 +1,7 @@
 ---
 title: 'About Troy Stories'
 slug: about
-image: 
+image: 'me (smaller).jpg'
 ---
 
 The core of creativity is authenticity. Honesty is freeing. People often feel the need to put on a show, even in business. You have to pretend like you know more than you know in order to get the job, but I feel like that’s unhealthy, but it’s often the state in which we find ourselves. So the question is: how do I deal with the way the world is currently versus what I think it ought to be, the ideology versus the pragmatism. And I tend to lean more toward ideology.
