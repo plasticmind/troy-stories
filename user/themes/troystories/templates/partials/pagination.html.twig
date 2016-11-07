@@ -1,3 +1,6 @@
-<div class="site-pagination">
-  New Stories Coming Weekly...
-</div>
+{# PLACE WHERE PAGINATION GOES #}
+
+{% if config.plugins.pagination.enabled and collection.params.pagination %} 
+<!-- Pagination -->
+    {% include 'partials/pagination.html.twig' with {'base_url': page.url, 'pagination':collection.params.pagination} %} 
+{% endif %}

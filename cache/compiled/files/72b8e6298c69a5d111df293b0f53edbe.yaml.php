@@ -2,8 +2,8 @@
 return [
     '@class' => 'Grav\\Common\\File\\CompiledYamlFile',
     'filename' => '/Users/plasticmind/Sites/greatbigbox/troystories.com/public_html/user/config/security.yaml',
-    'modified' => 1477017164,
+    'modified' => 1478526983,
     'data' => [
-        'salt' => 'HoLqIcG1vsuEBK'
+        'salt' => 'xlKPbL2quaDjrJ'
     ]
 ];
