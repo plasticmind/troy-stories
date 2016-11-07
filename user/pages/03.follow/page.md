@@ -1,6 +1,8 @@
 ---
 title: 'Follow Troy Stories'
 slug: follow
+process:
+  twig: true
 ---
 
 New stories every few days on these fine social networks.
