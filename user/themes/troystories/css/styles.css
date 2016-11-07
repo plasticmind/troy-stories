@@ -389,7 +389,7 @@ hr {
   padding-top: 15px;
 }
 .story {
-  margin-bottom: 4rem;
+  margin-bottom: 2em;
 }
 .page-photo,
 .story-photo {
@@ -445,6 +445,7 @@ hr {
   max-width: 300px;
 }
 .site-footer .motto {
+  font-size: 0.85em;
   text-align: center;
   font-style: italic;
 }
