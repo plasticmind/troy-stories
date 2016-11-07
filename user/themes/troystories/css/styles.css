@@ -486,7 +486,7 @@ hr {
   margin-bottom: 6rem;
 }
 .site-content .social img {
-  width: 100px;
+  width: 70px;
 }
 .page-follow .site-content {
   text-align: center;
@@ -511,7 +511,7 @@ there.
     margin-left: 0;
     margin-right: 0;    
   }
-  .page-story .site-content {
+  .site-content {
     font-size: 1.2em;
   }
   .story-footer .read-next {
@@ -542,6 +542,9 @@ there.
   }
   .story-footer .read-next img {
     max-width: 100%;
+  }
+  .site-content .social img {
+    width: 100px;
   }
 }
 

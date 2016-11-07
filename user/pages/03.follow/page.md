@@ -3,7 +3,7 @@ title: 'Follow Troy Stories'
 slug: follow
 ---
 
-Look for new stories every couple of days on these fine social networks:
+New stories every few days on these fine social networks.
 
 <div class="social">
 <ul>
@@ -13,4 +13,4 @@ Look for new stories every couple of days on these fine social networks:
 </ul>
 </div>
 
-You can also reach me at: [jesse@plasticmind.com](mailto:jesse@plasticmind.com)
+You can reach me at: [jesse@plasticmind.com](mailto:jesse@plasticmind.com)
