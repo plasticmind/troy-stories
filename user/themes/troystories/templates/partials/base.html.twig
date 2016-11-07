@@ -83,7 +83,7 @@
   {% block javascripts %}
     {% do assets.add('theme://js/jquery-3.1.1.min.js') %}
     {% do assets.add('theme://js/masonry.min.js') %}
-    {% do assets.add('theme://js/ts.js') %}
+    {% do assets.add('theme://js/ts.js','1.1') %}
     
     {# ... #}
     {% if browser.getBrowser == 'msie' and browser.getVersion >= 8 and browser.getVersion <= 9 %}
