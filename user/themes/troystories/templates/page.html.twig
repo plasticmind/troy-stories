@@ -1,0 +1,20 @@
+{% embed 'partials/base.html.twig' %}
+
+{% block body %}
+<body class="page-individual">
+{% endblock %}
+
+{% block content %}
+
+<div class="site-content" role="main">
+    <article class="page">
+        <h1 class="post-title">{{page.title}}</h1>
+        <div class="page-content">
+            {{content}}
+        </div>
+    </article>
+</div>
+
+{% endblock %}
+
+{% endembed %}

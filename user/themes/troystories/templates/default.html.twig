@@ -1,0 +1,17 @@
+{% extends 'partials/base.html.twig' %} 
+{% set collection = page.collection() %} 
+
+{% block content %}
+
+<div class="site-content" role="main">
+    <div class="story-list">
+            {% for post in collection %} {% include 'partials/article.html.twig' %} {% endfor %}
+    </div>
+</div>
+
+{% if config.plugins.pagination.enabled and collection.params.pagination %} 
+<!-- Pagination -->
+    {% include 'partials/pagination.html.twig' with {'base_url': page.url, 'pagination':collection.params.pagination} %} 
+{% endif %}
+
+{% endblock %}
