@@ -400,6 +400,10 @@ hr {
 .story-photo img {
   max-width: 100%;
 }
+.story-content.large {
+  font-size: 2em;
+  text-align: center;
+}
 .story-footer {
   padding-bottom: 2em; 
   text-align: center;

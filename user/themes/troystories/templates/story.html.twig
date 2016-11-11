@@ -14,7 +14,8 @@
         <img src="{{ page.media[page.header.image].url }}" alt="{{page.title}}">
       </div>
       {% endif %}
-      <div class="story-content">
+
+      <div class="story-content{% if page.content|length < 35 %} large{% endif %}">
         {{ page.content }}
       </div>
     </article>

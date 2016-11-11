@@ -2014,6 +2014,47 @@
 		"randomFootnoteNumbers": 0,
 		"useCompatibilityMode": 0
 		},
+	"\/user\/pages\/03.follow\/me (smaller).jpg": {
+		"fileType": 16384,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"initialSize": 136375,
+		"inputAbbreviatedPath": "\/user\/pages\/03.follow\/me (smaller).jpg",
+		"outputAbbreviatedPath": "\/user\/pages\/03.follow\/me (smaller).jpg",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"processed": 0
+		},
+	"\/user\/pages\/03.follow\/page.html": {
+		"fileType": 8192,
+		"ignore": 1,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/user\/pages\/03.follow\/page.html",
+		"outputAbbreviatedPath": "No Output Path",
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0
+		},
+	"\/user\/pages\/03.follow\/page.md": {
+		"criticStyle": 0,
+		"enableFootnotes": 1,
+		"enableLabels": 1,
+		"enableSmartQuotes": 1,
+		"escapeLineBreaks": 0,
+		"fileType": 4096,
+		"ignore": 0,
+		"ignoreWasSetByUser": 0,
+		"inputAbbreviatedPath": "\/user\/pages\/03.follow\/page.md",
+		"maskEmailAddresses": 1,
+		"outputAbbreviatedPath": "\/user\/pages\/03.follow\/page.html",
+		"outputFormat": 0,
+		"outputPathIsOutsideProject": 0,
+		"outputPathIsSetByUser": 0,
+		"outputStyle": 0,
+		"parseMetadata": 1,
+		"processHTML": 0,
+		"randomFootnoteNumbers": 0,
+		"useCompatibilityMode": 0
+		},
 	"\/user\/pages\/images\/photos\/20161010-1.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
