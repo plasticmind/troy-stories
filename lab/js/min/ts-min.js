@@ -1,1 +1,0 @@
-$(function(){$(".story-list").masonry({percentPosition:!0,itemSelector:".story",transitionDuration:0}),console.log("Document ready worked.")});

@@ -1,49 +1,36 @@
 <?php
 /**
- * @package    Grav.Core
- *
- * @copyright  Copyright (C) 2014 - 2016 RocketTheme, LLC. All rights reserved.
- * @license    MIT License; see LICENSE file for details.
+ * The main template file.
  */
 
-namespace Grav;
+get_header(); ?>
 
-// Ensure vendor libraries exist
-$autoload = __DIR__ . '/vendor/autoload.php';
-if (!is_file($autoload)) {
-    die("Please run: <i>bin/grav install</i>");
-}
+	<div class="site-content" role="main">
 
-use Grav\Common\Grav;
-use RocketTheme\Toolbox\Event\Event;
+	    <div class="story-list">
+		<?php if ( have_posts() ) :
+			while ( have_posts() ) : the_post();
 
-// Register the auto-loader.
-$loader = require_once $autoload;
+				get_template_part( 'fragment-story' );
+				
+			endwhile;
 
-if (version_compare($ver = PHP_VERSION, $req = GRAV_PHP_MIN, '<')) {
-    die(sprintf('You are running PHP %s, but Grav needs at least <strong>PHP %s</strong> to run.', $ver, $req));
-}
+		else :
 
-// Set timezone to default, falls back to system if php.ini not set
-date_default_timezone_set(@date_default_timezone_get());
+			echo "Not a story to be found here. Sorry.";
 
-// Set internal encoding if mbstring loaded
-if (!extension_loaded('mbstring')) {
-    die("'mbstring' extension is not loaded.  This is required for Grav to run correctly");
-}
-mb_internal_encoding('UTF-8');
+		endif; ?>
+		</div><!-- .story-list -->
 
-// Get the Grav instance
-$grav = Grav::instance(
-    array(
-        'loader' => $loader
-    )
-);
+		<?php if ( get_next_posts_link() ) : ?>
+		<div class="site-pagination">
 
-// Process the page
-try {
-    $grav->process();
-} catch (\Exception $e) {
-    $grav->fireEvent('onFatalException', new Event(['exception' => $e]));
-    throw $e;
-}
+			<div class="nav-previous"><?php next_posts_link( 'Load More Stories...' ); ?></div>
+
+		</div>
+		<?php endif; ?>
+
+	</div><!-- .site-content -->
+
+<?php
+get_footer();
