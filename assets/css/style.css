@@ -361,7 +361,7 @@ hr {
   margin: 0 0 -20px;
 }
 .site-header img {
-  max-width: 500px;
+  max-width: 100%;
 }
 .site-nav {
   text-align: center;
