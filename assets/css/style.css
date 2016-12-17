@@ -361,7 +361,7 @@ hr {
   margin: 0 0 -20px;
 }
 .site-header img {
-  max-width: 100%;
+  max-width: 250px;
 }
 .site-nav {
   text-align: center;
@@ -527,6 +527,9 @@ there.
 
 /* Larger than phablet (also point when grid becomes active) */
 @media (min-width: 550px) {
+  .site-header img {
+    max-width: 500px;
+  }
   .page-photo,
   .story-photo {
     margin-left: 0;
