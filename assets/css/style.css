@@ -397,10 +397,8 @@ hr {
 }
 .page-photo,
 .story-photo {
-/*
   margin-left: -20px;
   margin-right: -20px;
-*/
   margin-bottom: 1rem;
 }
 .page-photo img,
@@ -437,9 +435,7 @@ hr {
 .site-pagination,
 .load-more {
   text-align: center;
-  /*
   margin: -20px;
-  */
 }
 .load-more span,
 .load-more a,
