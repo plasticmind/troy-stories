@@ -15,6 +15,8 @@
   <div class="colophon" style="font-style: italic;font-size:13px;margin-top:14px;text-align:center;">An endeavor in empathy by <a href="http://plasticmind.com" title="Plasticmind Design" style="color:#999">Plasticmind</a></div>
 </div>
 
+<?php wp_footer(); ?>
+
 <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->  
 </body>
