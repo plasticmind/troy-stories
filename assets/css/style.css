@@ -360,6 +360,9 @@ hr {
 .site-header h1 {
   margin: 0 0 -20px;
 }
+.site-header img {
+  max-width: 500px;
+}
 .site-nav {
   text-align: center;
 }

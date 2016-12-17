@@ -24,7 +24,7 @@
     <div class="site-header">
       <h1 class="logo">
         <span class="quiet"><?php echo bloginfo( 'name' ); ?></span>
-        <a href="<?php echo bloginfo( 'url' ); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/i/logo.png" alt="Troy Stories Logo" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/i/logo.svg" width="500" height="134" /></a>
+        <a href="<?php echo bloginfo( 'url' ); ?>"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/i/logo.png" alt="Troy Stories Logo" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/i/logo.svg" /></a>
       </h1>
     </div>
     <div class="site-nav">
