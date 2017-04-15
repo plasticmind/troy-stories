@@ -1,4 +1,4 @@
-$(document).ready(function($) {
+jQuery(document).ready(function($) {
 
 	var paths = $('.site-header .logo path:not(defs path)');
 	paths.each(function(i, e) {
