@@ -362,7 +362,11 @@ hr {
 .site-header h1 {
   margin: 0 0 -20px;
 }
+.site-header path {
+  transform: stroke 1s linear;
+}
 .site-header:hover path {
+  transform: stroke .25s linear;
   stroke: #E92739 !important;
 }
 .site-header img {
