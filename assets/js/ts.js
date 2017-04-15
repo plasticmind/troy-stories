@@ -1,6 +1,6 @@
 jQuery(document).ready(function($) {
 
-	$('.site-header .logo a').css('opacity') = '1';
+	$('.site-header .logo a').css('opacity','1');
 
 	if(!Cookies.get('returning_visitor')) {
 
