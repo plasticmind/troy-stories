@@ -1,5 +1,11 @@
 jQuery(document).ready(function($) {
 
+	$('.site-header .logo a').show();
+
+	if(!Cookies.get('returning_visitor')) {
+		var paths = $('.site-header .logo path:not(defs path)');
+	}
+
 	var paths = $('.site-header .logo path:not(defs path)');
 	paths.each(function(i, e) {
 	    e.style.strokeDasharray = e.style.strokeDashoffset = e.getTotalLength();
