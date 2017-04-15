@@ -1,8 +1,8 @@
 jQuery(document).ready(function($) {
 
-	$('.site-header .logo a').show();
+	$('.site-header .logo a').css('opacity') = '1';
 
-	if(Cookies.get('returning_visitor')) {
+	if(!Cookies.get('returning_visitor')) {
 
 		var paths = $('.site-header .logo path:not(defs path)');
 		paths.each(function(i, e) {
@@ -30,7 +30,6 @@ jQuery(document).ready(function($) {
 		$('.site-header .logo').mouseenter(function() { tl.pause(); });
 		$('.site-header .logo').mouseleave(function() { tl.play(); });	
 
-	} else {
 		Cookies.set('returning_visitor', '1', { expires: 1 });
 	}
 
