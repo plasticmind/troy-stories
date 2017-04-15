@@ -47,7 +47,7 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%; }
 body {
-  font-size: 2.2em; /* currently ems cause chrome bug misinterpreting rems on body element */
+  font-size: 2em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.4;
   font-weight: 400;
   font-family: "Crimson Text", "Times New Roman", serif;
@@ -290,7 +290,7 @@ p,
 ul,
 ol,
 form {
-  margin-bottom: 2.5rem; }
+  margin-bottom: 1.5rem; }
 
 
 /* Utilities
@@ -407,6 +407,9 @@ hr {
 .story-photo img {
   max-width: 100%;
 }
+.story-content {
+  margin: 0 auto;
+}
 .story-content.large {
   font-size: 2em;
   text-align: center;
@@ -502,7 +505,7 @@ hr {
 }
 .single-post .site-content,
 .page .site-content {
-  max-width: 720px;
+  max-width: 960px;
   margin: 0 auto;
 }
 .single-post .story {
@@ -567,6 +570,13 @@ there.
   }
   .site-content .social img {
     width: 100px;
+  }
+  .story-content {
+    margin-top: 1em;
+    width: 90%;
+  }
+  .single .story-content {
+    font-size: 1.3em;
   }
 }
 

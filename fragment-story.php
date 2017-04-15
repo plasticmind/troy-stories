@@ -10,7 +10,7 @@
       echo '</div>';
       }
       ?>
-      <div class="story-content<?php if((strlen(get_the_content())<35)&&(is_single())) { echo ' large'; }?>">
+      <div class="story-content<?php if((strlen(get_the_content())<64)&&(is_single())) { echo ' large'; }?>">
         <?php the_content(); ?>
       </div>
     </article>

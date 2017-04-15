@@ -16,9 +16,11 @@ function pm_register_resources() {
 
     wp_deregister_script( 'jquery' );
     wp_register_script( 'jquery', includes_url( '/js/jquery/jquery.js' ), false, NULL, true );
+// wp_register_script( 'jquery', 'http://masonry.desandro.com/v2/js/jquery-1.7.1.min.js', false, NULL, true );
     wp_enqueue_script( 'jquery' );
     //wp_enqueue_script( 'jquery-masonry' );
-
+//    wp_enqueue_script( 'ts-infinitescroll', get_stylesheet_directory_uri().'/assets/js/jquery.infinitescroll.min.js', null, null, true);
+    wp_enqueue_script( 'ts-imagesloaded', get_stylesheet_directory_uri().'/assets/js/imagesloaded.min.js', null, null, true);
     wp_enqueue_script( 'ts-masonry', get_stylesheet_directory_uri().'/assets/js/masonry.min.js', null, null, true);
     wp_enqueue_script( 'ts-scripts', get_stylesheet_directory_uri().'/assets/js/ts.js',null, pm_version_hash('/assets/js/ts.js'), true);
     
@@ -43,6 +45,7 @@ add_action( 'wp_head', 'pm_register_ga');
 /* = Images */
 
 add_theme_support( 'post-thumbnails' );
+add_image_size( 'next-thumb', 800, 400 );
 
 /* = Add page slug to body class */
 

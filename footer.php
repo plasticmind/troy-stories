@@ -6,9 +6,9 @@
   </div>
   <div class="social">
     <ul>
-      <li><a href="http://facebook.com/troynystories"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/i/icon-facebook.png" alt="Troy Stories on Facebook" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/i/icon-facebook.svg" /></a></li>
-      <li><a href="http://twitter.com/troy_stories"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/i/icon-twitter.png" alt="Troy Stories on Twitter" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/i/icon-twitter.svg" /></a></li>
-      <li><a href="http://instagram.com/troy_stories"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/i/icon-instagram.png" alt="Troy Stories on Instagram" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/i/icon-instagram.svg" /></a></li>
+      <li><a href="http://facebook.com/troynystories" rel="nofollow"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/i/icon-facebook.png" alt="Troy Stories on Facebook" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/i/icon-facebook.svg" /></a></li>
+      <li><a href="http://twitter.com/troy_stories" rel="nofollow"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/i/icon-twitter.png" alt="Troy Stories on Twitter" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/i/icon-twitter.svg" /></a></li>
+      <li><a href="http://instagram.com/troy_stories" rel="nofollow"><img src="<?php echo get_stylesheet_directory_uri(); ?>/assets/i/icon-instagram.png" alt="Troy Stories on Instagram" srcset="<?php echo get_stylesheet_directory_uri(); ?>/assets/i/icon-instagram.svg" /></a></li>
     </ul>
   </div>
   <div class="motto">Stories from the people of Troy, NY</div>
