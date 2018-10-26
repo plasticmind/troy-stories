@@ -34,9 +34,8 @@
   margin: 0 auto;
   padding: 0;
   box-sizing: border-box; 
-  overflow: hidden;
 }
-
+* { box-sizing: border-box; }
 
 
 /* Base Styles
@@ -47,6 +46,7 @@ are based on 10px sizing. So basically 1.5rem = 15px :) */
 html {
   font-size: 62.5%; }
 body {
+  background: url(../i/crossword.png);
   font-size: 2em; /* currently ems cause chrome bug misinterpreting rems on body element */
   line-height: 1.4;
   font-weight: 400;
@@ -57,7 +57,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
+::selection {
+  background-color: #E92739;
+  color: #fff;
+}
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -338,7 +341,6 @@ hr {
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
 .site-header,
-.site-content,
 .site-footer {
   padding: 20px;
 }
@@ -346,6 +348,9 @@ hr {
 .load-more,
 .site-footer {
   clear: both;
+}
+.story-list {
+  min-height: 100vh;
 }
 
 /* Site Header
@@ -404,8 +409,11 @@ hr {
 .site-content {
   padding-top: 15px;
 }
+
 .story {
   margin-bottom: 2em;
+  background: #fff;
+  overflow: hidden;
 }
 .page-photo,
 .story-photo {
@@ -416,9 +424,12 @@ hr {
 .page-photo img,
 .story-photo img {
   max-width: 100%;
+  height: auto;
 }
 .story-content {
   margin: 0 auto;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 .story-content.large {
   font-size: 2em;
@@ -444,6 +455,87 @@ hr {
   max-width: 100%;
 }
 
+/* Animation
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.animate .story-list .story:first-child {
+    animation: slide-up .5s ease 0s 1; 
+}
+.animate .story-list .story:nth-child(2) {
+    animation: slide-up 1s ease 0s 1; 
+}
+.animate .story-list .story:nth-child(3) {
+    animation: slide-up 1.5s ease 0s 1; 
+}
+.animate .story-list .story:nth-child(4) {
+    animation: slide-up 2s ease 0s 1; 
+}
+.animate .story-list .story:nth-child(5) {
+    animation: slide-up 2.5s ease 0s 1; 
+}
+.animate .story-list .story:nth-child(6) {
+    animation: slide-up 3s ease 0s 1; 
+}
+.animate .story-list .story:nth-child(7) {
+    animation: slide-up 3.5s ease 0s 1; 
+}
+.animate .story-list .story:nth-child(8) {
+    animation: slide-up 4s ease 0s 1; 
+}
+.animate .story-list .story:nth-child(9) {
+    animation: slide-up 4.5s ease 0s 1; 
+}
+.animate .story-list .story:nth-child(10) {
+    animation: slide-up 5s ease 0s 1; 
+}
+.animate .site-nav {
+  animation: slide-up 4s 0s 1 ease; 
+}
+
+.story-list .story {
+  transition: box-shadow .5s ease-out;
+}
+.story-list .story:hover {
+  box-shadow: 0 15px 30px 0 rgba(0,0,0,0.06),
+            0 5px 15px 0 rgba(0,0,0,0.03);
+  transition: box-shadow 5s ease-out;
+}
+.read-next-story img,
+.story-list .story img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform .5s ease-out;
+}
+.read-next-story:hover img,
+.story-list .story:hover img {
+    transform: scale(1.05);
+    transition: transform 5s ease-out;
+}
+.story-list .story-photo,
+.read-next-story .story-photo {
+  overflow: hidden;
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(1rem); }
+  25% {
+    opacity: 0;
+    transform: translateY(1rem); }
+  50% {
+    opacity: 0;
+    transform: translateY(1rem); }
+  75% {
+    opacity: 0;
+    transform: translateY(1rem); }
+  100% {
+    opacity: 1;
+    transform: translateY(0); } 
+}
+
 /* Pagination
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 
@@ -451,6 +543,8 @@ hr {
 .load-more {
   text-align: center;
   margin: -20px;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 .load-more span,
 .load-more a,
@@ -472,6 +566,8 @@ hr {
 /* Footer
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .site-footer {
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   background-color: #221D20;
   color: #6a6a6a;
 }
@@ -507,6 +603,9 @@ hr {
 
 /* Custom Pages
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
+article.page {
+  padding-bottom: 40px;
+}
 .page-404 .site-content {
   max-width: 540px;
   text-align: center;
@@ -527,6 +626,18 @@ hr {
 .page-follow .site-content {
   text-align: center;
 }
+
+/* The Grid
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.story-list {
+  display: grid;
+  grid-gap: 10px 40px;
+  grid-template-columns: repeat(auto-fill, minmax(350px,1fr));
+  grid-auto-rows: 20px;
+}
+
+
+
 /* Media Queries
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*
@@ -555,20 +666,15 @@ there.
   }
   .story-footer .read-next img {
     max-width: 66%;
+    margin: 0 auto;
   }
 }
 
 /* Larger than tablet */
 @media (min-width: 750px) {
   .story-list {
-    width: 103%; /* 990px */
-    overflow: hidden;
-    margin-left: -1.562%; /* 15px */
   }
   .story-list .story {
-    float: left;
-    width: 46.876%; /* 305px */
-    margin: 0 1.515% 1.875em; /* 15px 30px */
   }
   .story-footer aside {
     width: 50%;
@@ -583,6 +689,7 @@ there.
   }
   .story-content {
     margin-top: 1em;
+    margin-bottom: 2em;
     width: 90%;
   }
   .single .story-content {
@@ -593,8 +700,6 @@ there.
 /* Larger than desktop */
 @media (min-width: 1000px) {
   .story-list .story {
-    width: 30.303%; /* 300px */
-    margin: 0 1.515% 1.875em; /* 15px 30px */
   }
 }
 

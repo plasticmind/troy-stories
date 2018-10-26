@@ -37,11 +37,9 @@ if(!empty($next_post)) { ?>
             <h4>...then read the next.</h4>
             <a class="read-next-story" href="<?php echo get_permalink($next_post->ID); ?>" title="<?php echo esc_attr($next_post->post_title); ?>">
 
-            <?php if ( has_post_thumbnail($next_post->ID)) { 
-            	$thumbnail_url = wp_get_attachment_image_src(get_post_thumbnail_id($next_post->ID),'next-thumb', true);
-      			$thumbnail_url = $thumbnail_url[0]; ?>
+            <?php if ( has_post_thumbnail($next_post->ID)) { ?>
       			<div class="story-photo">
-        				<img src="<?php echo $thumbnail_url; ?>" alt="<?php echo get_the_title($next_post->ID);?>">
+        				<?php echo get_the_post_thumbnail($next_post->ID); ?>
       			</div>
             </a>
    			<?php } ?>         

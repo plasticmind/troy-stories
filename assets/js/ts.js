@@ -4,6 +4,8 @@ jQuery(document).ready(function($) {
 
 	if(!Cookies.get('returning_visitor')) {
 
+		document.body.className += ' ' + 'animate';
+
 		var paths = $('.site-header .logo path:not(defs path)');
 		paths.each(function(i, e) {
 		    e.style.strokeDasharray = e.style.strokeDashoffset = e.getTotalLength();
@@ -36,6 +38,36 @@ jQuery(document).ready(function($) {
 
 });
 
+
+function resizeGridItem(item){
+  grid = document.getElementsByClassName("story-list")[0];
+  rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+  rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
+  rowSpan = Math.ceil(((item.querySelector('.content').getBoundingClientRect().height+rowGap)/(rowHeight+rowGap)+2));
+    item.style.gridRowEnd = "span "+rowSpan;
+}
+
+function resizeAllGridItems(){
+  allItems = document.getElementsByClassName("story");
+  for(x=0;x<allItems.length;x++){
+    resizeGridItem(allItems[x]);
+  }
+}
+
+function resizeInstance(instance){
+	item = instance.elements[0];
+  resizeGridItem(item);
+}
+
+window.onload = resizeAllGridItems();
+window.addEventListener("resize", resizeAllGridItems);
+
+allItems = document.getElementsByClassName("story");
+for(x=0;x<allItems.length;x++){
+  imagesLoaded( allItems[x], resizeInstance);
+}
+
+/*
 jQuery(window).on('load', function(){ var $ = jQuery;
  
     var $container = $('.story-list');
@@ -53,4 +85,4 @@ jQuery(window).on('load', function(){ var $ = jQuery;
 
 });
 
-
+*/

@@ -7,19 +7,19 @@ get_header(); ?>
 
 	<div class="site-content" role="main">
 
-	    <div class="story-list">
-		<?php if ( have_posts() ) :
-			while ( have_posts() ) : the_post();
+    <div class="story-list">
+			<?php if ( have_posts() ) :
+				while ( have_posts() ) : the_post();
 
-				get_template_part( 'fragment-story' );
-				
-			endwhile;
+					get_template_part( 'fragment-story' );
+					
+				endwhile;
 
-		else :
+			else :
 
-			echo "Not a story to be found here. Sorry.";
+				echo "Not a story to be found here. Sorry.";
 
-		endif; ?>
+			endif; ?>
 		</div><!-- .story-list -->
 
 		<?php if ( get_next_posts_link() ) : ?>
