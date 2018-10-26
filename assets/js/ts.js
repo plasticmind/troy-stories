@@ -43,7 +43,7 @@ function resizeGridItem(item){
   grid = document.getElementsByClassName("story-list")[0];
   rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
   rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
-  rowSpan = Math.ceil(((item.querySelector('.content').getBoundingClientRect().height+rowGap)/(rowHeight+rowGap)));
+  rowSpan = Math.ceil(((item.querySelector('.content').getBoundingClientRect().height+rowGap)/(rowHeight+rowGap))+2);
   /*console.log('rowHeight='+rowHeight+' & rowGap='+rowGap+' & rowSpan='+rowSpan+' & item.content.height='+item.querySelector('.content').getBoundingClientRect().height);*/
     item.style.gridRowEnd = "span "+rowSpan;
 }
@@ -80,6 +80,7 @@ if (jQuery('.story-list').length > 0) {
 	});
 
 	infScroll.on( 'append', function( response, path ) { resizeAllGridItems() });
+
 
 }
 
