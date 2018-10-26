@@ -491,6 +491,9 @@ hr {
 .animate .site-nav {
   animation: slide-up 4s 0s 1 ease; 
 }
+.site-nav {
+  animation: slide-up 1s 0s 1 ease; 
+}
 
 .story-list .story {
   transition: box-shadow .5s ease-out;

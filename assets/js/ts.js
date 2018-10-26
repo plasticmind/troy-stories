@@ -79,8 +79,12 @@ if (jQuery('.story-list').length > 0) {
 	  history: false
 	});
 
-	infScroll.on( 'append', function( response, path ) { resizeAllGridItems() });
+	infScroll.on( 'append', function( response, path ) { 
+		resizeAllGridItems();
+		setTimeout(function() { resizeAllGridItems(); }, 3000);
+	});
 
+	
 
 }
 
