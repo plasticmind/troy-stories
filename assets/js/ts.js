@@ -43,7 +43,8 @@ function resizeGridItem(item){
   grid = document.getElementsByClassName("story-list")[0];
   rowHeight = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
   rowGap = parseInt(window.getComputedStyle(grid).getPropertyValue('grid-row-gap'));
-  rowSpan = Math.ceil(((item.querySelector('.content').getBoundingClientRect().height+rowGap)/(rowHeight+rowGap)+2));
+  rowSpan = Math.ceil(((item.querySelector('.content').getBoundingClientRect().height+rowGap)/(rowHeight+rowGap)));
+  /*console.log('rowHeight='+rowHeight+' & rowGap='+rowGap+' & rowSpan='+rowSpan+' & item.content.height='+item.querySelector('.content').getBoundingClientRect().height);*/
     item.style.gridRowEnd = "span "+rowSpan;
 }
 
@@ -59,13 +60,33 @@ function resizeInstance(instance){
   resizeGridItem(item);
 }
 
-window.onload = resizeAllGridItems();
-window.addEventListener("resize", resizeAllGridItems);
+if (jQuery('.story-list').length > 0) { 
+	window.onload = resizeAllGridItems();
+	window.addEventListener("resize", resizeAllGridItems);
 
-allItems = document.getElementsByClassName("story");
-for(x=0;x<allItems.length;x++){
-  imagesLoaded( allItems[x], resizeInstance);
+	allItems = document.getElementsByClassName("story");
+	for(x=0;x<allItems.length;x++){
+	  imagesLoaded( allItems[x], resizeInstance);
+	}
+
+	/* Infinite Scroll */
+
+	document.getElementsByClassName('site-pagination')[0].style.visibility = 'hidden';
+
+	var infScroll = new InfiniteScroll( '.story-list', {
+	  path: '.site-pagination a',
+	  append: '.story',
+	  history: false
+	});
+
+	infScroll.on( 'append', function( response, path ) { resizeAllGridItems() });
+
 }
+
+
+
+
+
 
 /*
 jQuery(window).on('load', function(){ var $ = jQuery;

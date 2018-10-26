@@ -19,7 +19,7 @@ function pm_register_resources() {
 // wp_register_script( 'jquery', 'http://masonry.desandro.com/v2/js/jquery-1.7.1.min.js', false, NULL, true );
     wp_enqueue_script( 'jquery' );
     //wp_enqueue_script( 'jquery-masonry' );
-//    wp_enqueue_script( 'ts-infinitescroll', get_stylesheet_directory_uri().'/assets/js/jquery.infinitescroll.min.js', null, null, true);
+    wp_enqueue_script( 'ts-infinitescroll', get_stylesheet_directory_uri().'/assets/js/infinite-scroll.min.js', null, null, true);
     wp_enqueue_script( 'ts-imagesloaded', get_stylesheet_directory_uri().'/assets/js/imagesloaded.min.js', null, null, true);
     wp_enqueue_script( 'ts-cookies', get_stylesheet_directory_uri().'/assets/js/js.cookies.js', null, null, true);
     wp_enqueue_script( 'ts-tweenmax', '//cdnjs.cloudflare.com/ajax/libs/gsap/1.19.1/TweenMax.min.js', null, null, true);
